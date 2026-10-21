@@ -1,0 +1,27 @@
+output shape: (32, 10)
+max |row sum - 1|: 2.2e-16
+untrained loss: 2.3026  (ln 10 = 2.3026)
+
+final test accuracy:
+W=16 lr=0.001: loss 2.3026, accuracy 10.19%
+W=16 lr=0.01: loss 2.3026, accuracy 10.19%
+W=16 lr=0.1: loss 1.5656, accuracy 32.59%
+W=64 lr=0.001: loss 2.3025, accuracy 10.19%
+W=64 lr=0.01: loss 2.3025, accuracy 10.19%
+W=64 lr=0.1: loss 0.1594, accuracy 93.89%
+
+gradient check (W=64, lr=0.1): 10/10 passed
+W3(40, 5): analytic +4.244454e-04, numeric +4.244454e-04, rel error 1.4e-09
+W1(19, 2): analytic -3.800815e-03, numeric -3.800815e-03, rel error 5.3e-10
+W1(1, 11): analytic -3.523988e-05, numeric -3.523988e-05, rel error 2.6e-08
+W3(41, 9): analytic +5.284119e-03, numeric +5.284119e-03, rel error 2.1e-10
+W2(38, 62): analytic +4.724713e-05, numeric +4.724713e-05, rel error 1.4e-08
+W2(59, 17): analytic +0.000000e+00, numeric +0.000000e+00, rel error 0.0e+00
+W3(42, 0): analytic -1.981823e-02, numeric -1.981823e-02, rel error 4.6e-11
+W2(54, 35): analytic -3.563001e-05, numeric -3.563001e-05, rel error 2.7e-08
+W1(48, 46): analytic +0.000000e+00, numeric +0.000000e+00, rel error 0.0e+00
+W3(11, 0): analytic -4.489256e-07, numeric -4.489256e-07, rel error 7.2e-09
+
+timing (1257 samples, median of 100 runs):
+W=16: forward 0.8930 ms, backward 1.1146 ms, ratio 1.25
+W=64: forward 2.0089 ms, backward 5.0337 ms, ratio 2.51
